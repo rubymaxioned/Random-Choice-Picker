@@ -43,6 +43,8 @@
     var input = document.querySelector(".input-text");
     var mainLi = document.querySelector("ul")
     var list = document.querySelectorAll("li");
+    console.log("initial list");
+    console.log(list);
     
 
     input.addEventListener('keyup', function(event) {
@@ -76,20 +78,23 @@
         var times = 30;
         var interval = setInterval(function () {
         var random = randomList();
-        console.log(random);
+        // console.log(random);
         highLight(random);
         setTimeout(() => {
             unHighLight(random);
         },300);
-            // clearInterval(interval);
+            clearInterval(interval);
             },300);
     }
 
     function randomList(){
         // list.forEach(function(count){
-            // console.log(list);
+            console.log("updated list");
+            console.log(list);
+            console.log("working");
             // list.classList.add('pick');
-            return list[Math.floor(Math.random()*list.length)];
+            console.log(list[Math.floor(Math.random()*list.length)]);
+            console.log(list);
         // })
     }
     // console.log(list);
