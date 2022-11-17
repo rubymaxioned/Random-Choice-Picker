@@ -186,6 +186,11 @@ ul li {
   justify-content: center;
 }
 
+textarea { 
+  padding: 5px;
+  font-size: 10px;
+ }
+
 .show { display: flex; }
 .pick { background-color: #191970; }
 
