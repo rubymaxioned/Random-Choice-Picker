@@ -43,6 +43,7 @@
     var input = document.querySelector(".input-text");
     var mainLi = document.querySelector("ul")
     var list = document.querySelectorAll("li");
+    
 
     input.addEventListener('keyup', function(event) {
         if(event.key == 'Enter') {
@@ -52,17 +53,36 @@
             var li = '';
             separatedInput.forEach(function(item) {
                 // console.log(item);
-                li += "<li>" + item + "</li>"; 
-                console.log(li);
+                li += "<li>" + item + "</li>";
+                // console.log(li);
+                randomSelect();
             })
 
          
             mainLi.innerHTML = li;
             // console.log(mainLi.innerHTML);
             event.target.value = '';
-            var interval = setInterval(function () {
-                
-            },1000);
+            // var interval = setInterval(function () {
+            //     separatedInput.forEach(function(item) {
+            //         // li.classList.add('pick');
+            //     })
+            // // clearInterval(interval);
+            // },1000);
 
         }
     })
+
+    function randomSelect() {
+        var times = 30;
+        var interval = setInterval(function () {
+            // randomList();
+            // clearInterval(interval);
+            },300);
+    }
+
+    // function randomList(){
+    //     list.forEach(function(count){
+    //         console.log(list);
+    //     })
+    // }
+    console.log(list);
