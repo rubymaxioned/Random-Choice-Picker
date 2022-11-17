@@ -2,8 +2,8 @@
 <html lang="en"> 
   <head>
     <meta charset="utf-8">
-    <title>Client</title>
-    <meta name="description" lang="en" content="">
+    <title>Random Choice Picker</title>
+    <meta name="description" lang="en" content="Random Choice picker">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
@@ -18,6 +18,21 @@
       <!--header section ends-->
       <!--main section start-->
       <main>
+        <div class="wrapper">
+          <p>enter all of the choices divided by a comma(',').</p>
+          <p>press enter when you're done</p>
+          <div class="input-box">
+            <!-- <input type="text" class="input"> -->
+            <textarea name="text" rows="4" cols="45" class="input-text"></textarea>
+            <span class="rotate">rotate</span>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+            </ul>
+          </div>
+        </div>
       </main>
       <!--main section end-->
       <!--footer section start-->
@@ -26,5 +41,7 @@
       <!--footer section end-->
     </div>
     <!--container end-->
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
