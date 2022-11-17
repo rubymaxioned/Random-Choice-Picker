@@ -75,14 +75,29 @@
     function randomSelect() {
         var times = 30;
         var interval = setInterval(function () {
-            // randomList();
+        var random = randomList();
+        console.log(random);
+        highLight(random);
+        setTimeout(() => {
+            unHighLight(random);
+        },300);
             // clearInterval(interval);
             },300);
     }
 
-    // function randomList(){
-    //     list.forEach(function(count){
-    //         console.log(list);
-    //     })
-    // }
-    console.log(list);
+    function randomList(){
+        // list.forEach(function(count){
+            // console.log(list);
+            // list.classList.add('pick');
+            return list[Math.floor(Math.random()*list.length)];
+        // })
+    }
+    // console.log(list);
+
+    function highLight(ran){
+        ran.classList.add('pick');
+    }
+
+    function unHighLight(ran){
+        ran.classList.remove('pick');
+    }
