@@ -178,7 +178,7 @@ ul li {
   min-width: 31px;
   min-height: 20px;
   border-radius: 10px;
-  display: flex;
+  display: none;
   align-items: center;
   background-color: #FFAC1C;
   color: #fff;
@@ -186,8 +186,8 @@ ul li {
   justify-content: center;
 }
 
-.show { background-color: #191970; }
-
+.show { display: flex; }
+.pick { background-color: #191970; }
 
 /*=================================
   main styling ends here
