@@ -175,15 +175,16 @@ ul {
 }
 
 ul li {
-  min-width: 31px;
-  min-height: 20px;
+  /* min-width: 31px;
+  min-height: 20px; */
   border-radius: 10px;
-  display: none;
-  align-items: center;
+  /* display: none; */
+  /* align-items: center; */
+  padding: 5px 10px;
   background-color: #FFAC1C;
   color: #fff;
   font-size: 11px;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 textarea { 
