@@ -124,9 +124,7 @@ li {
 /*=================================
   main styling starts here
 =================================*/
-main {
-  background-color: #3c65f1;
-}
+main { background-color: #3c65f1; }
 
 .wrapper {
   min-height: 100vh;
@@ -175,16 +173,11 @@ ul {
 }
 
 ul li {
-  /* min-width: 31px;
-  min-height: 20px; */
   border-radius: 10px;
-  /* display: none; */
-  /* align-items: center; */
   padding: 5px 10px;
   background-color: #FFAC1C;
   color: #fff;
   font-size: 11px;
-  /* justify-content: center; */
 }
 
 textarea { 
