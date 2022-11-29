@@ -1,34 +1,30 @@
 
-var input = document.querySelector(".input-text");
-var mainLi = document.querySelector("ul");
-
-var counter = 0;
-var updatedList = [];
-
-function orangeButton(some) {
-    var commaSeparatedInput = some.split(',');
-    var list = document.createElement('li');
-    mainLi.append(list);
-    list.innerText = commaSeparatedInput.pop();
-    updatedList.push(list);
-}
+var input = document.querySelector(".input-text"),
+    mainLi = document.querySelector("ul"),
+    counter = 0;
 
 input.addEventListener('keyup', function (event) {
-    var getInput = event.target.value;
-    if (event.key == ',') {
-        getInputString = getInput.slice(0, getInput.length - 1);
-        orangeButton(getInputString);
-    }
-
-    if (event.key == 'Enter') {
-        var separatedInput = getInput.split(',');
+    mainLi.innerHTML = "";
+    var getInput = event.target.value,
+        getInputString = getInput.trim().split(','),
+        lastChar = getInputString.slice(-1);
+    
+        if (lastChar == '') { 
+        getInputString = getInputString.slice(0, -1); // trim last character
+        }
+    
+    getInputString.forEach(function(index){
         var list = document.createElement('li');
+        list.innerText = index;  
         mainLi.append(list);
-        list.innerText = separatedInput[separatedInput.length - 1];
-        updatedList.push(list);
-        event.target.value = '';
+    })
+    
+    var updatedList = getInputString;  
+    
+    if (event.key == 'Enter') {
+        input.value = "";
         var interval = setInterval(function () {
-            var ranVal = updatedList[Math.floor(Math.random() * updatedList.length)];
+            var ranVal = mainLi.children[Math.floor(Math.random() * mainLi.children.length)];
             ranVal.classList.add('pick');
             setTimeout(function () {
                 ranVal.classList.remove('pick');
@@ -43,5 +39,4 @@ input.addEventListener('keyup', function (event) {
             counter++;
         }, 200);
     }
-
 })
