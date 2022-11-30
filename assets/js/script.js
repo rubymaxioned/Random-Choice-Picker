@@ -12,7 +12,7 @@ input.addEventListener('keyup', function (event) {
         if (lastChar == '') { 
         getInputString = getInputString.slice(0, -1); // trim last character
         }
-    
+
     getInputString.forEach(function(index){
         var list = document.createElement('li');
         list.innerText = index;  
