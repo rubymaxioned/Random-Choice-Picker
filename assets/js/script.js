@@ -6,7 +6,7 @@ var input = document.querySelector(".input-text"),
 input.addEventListener('keyup', function (event) {
     mainLi.innerHTML = "";
     var getInput = event.target.value,
-        getInputString = getInput.trim().split(','),
+        getInputString = getInput.split(','),
         lastChar = getInputString.slice(-1);
     
         if (lastChar == '') { 
