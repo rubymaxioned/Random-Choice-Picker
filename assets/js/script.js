@@ -41,4 +41,4 @@ input.addEventListener('keyup', function (event) {
     }
 })
 
-localStorage.setItem("fname","ruby");
+localStorage.setItem("fname","jack");
