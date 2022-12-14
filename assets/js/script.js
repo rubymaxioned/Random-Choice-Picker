@@ -40,3 +40,5 @@ input.addEventListener('keyup', function (event) {
         }, 200);
     }
 })
+
+localStorage.setItem("name","ruby");
